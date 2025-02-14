@@ -1,7 +1,7 @@
 import React from 'react'
 import './about.css'
 import Onin from '../../assets/Onin.png'
-import CV from '../../assets/Binuya, Onin John Paul CV2.pdf'
+import CV from '../../assets/Binuya-Onin John Paul CV2.pdf'
 import Info from './Info'
 
 const About = () => {
