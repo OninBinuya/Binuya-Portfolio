@@ -42,7 +42,9 @@ const Contact = () => {
 
             <div className="contact__content">
                 <h3 className="contact__title">Send something</h3>
-                <form action="https://formsubmit.co/oninjohn.binuya@gmail.com" method="POST" className="contact__form">
+                <form action="https://formsubmit.co/oninjohn.binuya@gmail.com" method="POST" className="contact__form"> 
+                    <input type="hidden" name="_next" value="https://oninbinuya.github.io/Binuya-Portfolio" />
+                    <input type="hidden" name="_captcha" value="false"></input>
                     
                 <div className="contact__form-div">
                     <input type="text" id="name" name="name" className="contact__form-input" placeholder=" " required />
