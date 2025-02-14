@@ -4,7 +4,7 @@ import './quali.css';
 
 const educationData = [
     {
-        title: "Graduting BSCpE Student",
+        title: "Graduating BSCpE Student",
         subtitle: "Wesleyan University - Philippines",
         date: "Aug 2021 - Jul 2025"
     },
