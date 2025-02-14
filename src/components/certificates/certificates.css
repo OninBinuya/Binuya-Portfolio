@@ -1,0 +1,217 @@
+.certificates__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.certificates__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.certificates__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: transform 0.2s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding: 6px;
+}
+
+.certificates__item:hover {
+    transform: scale(1.05);
+}
+
+.certificates__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.certificates__title {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+    padding: 0 4px;
+    width: 100%;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+/* Updated Modal Styles with better mobile support */
+.pdf-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.pdf-modal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 95%;
+    height: 95%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+}
+
+.pdf-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f8f8;
+    border-radius: 8px 8px 0 0;
+}
+
+.pdf-modal-header h3 {
+    margin: 0;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: calc(100% - 40px);
+}
+
+.pdf-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+    color: #666;
+    transition: color 0.2s;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.pdf-modal-close:hover {
+    color: #000;
+    background-color: #eee;
+}
+
+.pdf-modal-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .certificates__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pdf-modal-content {
+        width: 98%;
+        height: 98%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certificates__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pdf-modal-header {
+        padding: 10px 12px;
+    }
+    
+    .pdf-modal-close {
+        font-size: 20px;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .certificates__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .pdf-modal-overlay {
+        padding: 8px;
+    }
+    
+    .pdf-modal-content {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .pdf-modal-header h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Additional mobile optimizations */
+@media screen and (max-width: 380px) {
+    .certificates__item {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .certificates__img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .certificates__title {
+        font-size: 12px;
+    }
+}
+
+/* Handle landscape orientation on mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .pdf-modal-content {
+        height: 98vh;
+    }
+    
+    .pdf-modal-header {
+        padding: 8px 12px;
+    }
+    
+    .pdf-modal-header h3 {
+        font-size: 0.9rem;
+    }
+}
