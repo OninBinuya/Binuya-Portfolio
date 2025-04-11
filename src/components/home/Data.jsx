@@ -6,7 +6,7 @@ const Data = () => {
           <h1 className="home_title">Onin Binuya
           </h1>
           
-          <h3 className="home_subtitle">aspiring Technical Support</h3>
+          <h3 className="home_subtitle">aspiring Network Engineer</h3>
             <p className="home_description">
             A computer engineer with practical experience in network configuration, hardware
             troubleshooting, and software support.
