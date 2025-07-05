@@ -4,17 +4,17 @@ import './quali.css';
 
 const educationData = [
     {
-        title: "Graduating BSCpE Student",
+        title: "Bachelor of Science in Computer Engineering - Magna Cum Laude",
         subtitle: "Wesleyan University - Philippines",
-        date: "Aug 2021 - Jul 2025"
+        date: "Aug 2021 - Aug 2025"
     },
     {
-        title: "SHS - With High Honors STEM Academic Track",
+        title: "SHS: STEM Academic Track - With High Honors",
         subtitle: "Cabanatuan City Senior High School",
         date: "Jun 2019 - May 2021"
     },
     {
-        title: "JHS - With High Honors SPA Curriculum",
+        title: "JHS: SPA Curriculum - With High Honors",
         subtitle: "Santa Rosa National High School",
         date: "Jun 2015 - May 2019"
     }
