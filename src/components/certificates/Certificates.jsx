@@ -12,9 +12,9 @@ import cyberSecurity from '../../assets/Certificates/cybersec.png';
 import networkBasic from '../../assets/Certificates/network-basic.png';
 import cyberThumbnail from '../../assets/Certificates/cyber.png';
 import dataAnalyticsThumbnail from '../../assets/Certificates/data-analytics.png';
-import dataScienceThumbnail from '../../assets/Certificates/data-science.png';
-import pythonThumbnail from '../../assets/Certificates/python.png';
-import CDCT from '../../assets/Certificates/cdct.png';
+import ITSupport from '../../assets/Certificates/ITSupport.png';
+import CDCA from '../../assets/Certificates/CDCA_Badge.png';
+import CDCT from '../../assets/Certificates/CDCT_Badge.png';
 import NC1 from '../../assets/Certificates/css-nc1.png';
 import NC2 from '../../assets/Certificates/css-nc2.png';
 import NC3 from '../../assets/Certificates/css-nc3.png';
@@ -32,8 +32,8 @@ import cyberSecPDF from '../../assets/Certificates/Onin John Paul Binuya_ Cybers
 import networkBasicPDF from '../../assets/Certificates/Binuya_Networking_Basics_Badge20240702-7-wxopnn.pdf';
 import introToCyberPDF from '../../assets/Certificates/Binuya_Introduction_to_Cybersecurity_Badge20240510-8-enuv4j.pdf';
 import dataAnalyticsPDF from '../../assets/Certificates/Binuya_Data_Analytics_Essentials_Badge20240921-7-i38jva.pdf';
-import dataSciencePDF from '../../assets/Certificates/data-science.pdf';
-import pythonPDF from '../../assets/Certificates/python-essentials 1.pdf';
+import GoogleITSupport from '../../assets/Certificates/Google_IT_Support.pdf';
+import CDCAPDF from '../../assets/Certificates/CDCA_Cert.pdf';
 import CDCTPDF from '../../assets/Certificates/Data Center Technician.pdf';
 import introCSSPDF from '../../assets/Certificates/Intro to CSS_Certificate of Completion.pdf';
 import configCompSysPDF from '../../assets/Certificates/Installing and Configuring Computer Systems_Certificate of Completion.pdf';
@@ -53,9 +53,9 @@ const certificates = [
     { title: 'Network Basics', thumbnail: networkBasic, pdf: networkBasicPDF },
     { title: 'Introduction to Cybersecurity', thumbnail: cyberThumbnail, pdf: introToCyberPDF },
     { title: 'Data Analytics', thumbnail: dataAnalyticsThumbnail, pdf: dataAnalyticsPDF },
-    { title: 'Data Science', thumbnail: dataScienceThumbnail, pdf: dataSciencePDF },
-    { title: 'Python', thumbnail: pythonThumbnail, pdf: pythonPDF },
-    { title: 'CDCT', thumbnail: CDCT, pdf: CDCTPDF },
+    { title: 'Google IT Support', thumbnail: ITSupport, pdf: GoogleITSupport },
+    { title: 'ePLDT/VITRO Certified Data Center Associate', thumbnail: CDCA, pdf: CDCAPDF },
+    { title: 'ePLDT/VITRO Certified Data Center Technician', thumbnail: CDCT, pdf: CDCTPDF },
     { title: 'Intro to CSS', thumbnail: NC1, pdf: introCSSPDF },
     { title: 'Configuring Computer Systems', thumbnail: NC2, pdf: configCompSysPDF },
     { title: 'Setting Up Computer Networks', thumbnail: NC4, pdf: setCompNet },
