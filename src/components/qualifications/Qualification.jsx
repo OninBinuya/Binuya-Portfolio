@@ -22,7 +22,7 @@ const educationData = [
 
 const workData = [
     {
-        title: "Project Lead & Technical Support OJT",
+        title: "Project Lead & Technical Support Intern (360 hours)",
         subtitle: "Philippine Information Agency",
         date: "Jun - Aug 2024"
     },
