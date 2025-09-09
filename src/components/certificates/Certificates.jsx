@@ -10,8 +10,8 @@ import OS from '../../assets/Certificates/os-basic.png';
 import ethicalHacking from '../../assets/Certificates/ethical-hacker.png';
 import cyberSecurity from '../../assets/Certificates/cybersec.png';
 import networkBasic from '../../assets/Certificates/network-basic.png';
-import cyberThumbnail from '../../assets/Certificates/cyber.png';
-import dataAnalyticsThumbnail from '../../assets/Certificates/data-analytics.png';
+import CCNA2 from '../../assets/Certificates/SRWE.png';
+import CCNA1 from '../../assets/Certificates/ITN.png';
 import ITSupport from '../../assets/Certificates/ITSupport.png';
 import CDCA from '../../assets/Certificates/CDCA_Badge.png';
 import CDCT from '../../assets/Certificates/CDCT_Badge.png';
@@ -30,8 +30,8 @@ import OSBasic from '../../assets/Certificates/Binuya_Operating_Systems_Basics_B
 import ethicalHackingPDF from '../../assets/Certificates/Binuya_Ethical_Hacker_Badge20241109-28-x4hx68.pdf';
 import cyberSecPDF from '../../assets/Certificates/Onin John Paul Binuya_ Cybersecurity Essentials_CISCO.pdf';
 import networkBasicPDF from '../../assets/Certificates/Binuya_Networking_Basics_Badge20240702-7-wxopnn.pdf';
-import introToCyberPDF from '../../assets/Certificates/Binuya_Introduction_to_Cybersecurity_Badge20240510-8-enuv4j.pdf';
-import dataAnalyticsPDF from '../../assets/Certificates/Binuya_Data_Analytics_Essentials_Badge20240921-7-i38jva.pdf';
+import CCNAITN from '../../assets/Certificates/CCNA1.pdf';
+import CCNASRWE from '../../assets/Certificates/CCNA2.pdf';
 import GoogleITSupport from '../../assets/Certificates/Google_IT_Support.pdf';
 import CDCAPDF from '../../assets/Certificates/CDCA_Cert.pdf';
 import CDCTPDF from '../../assets/Certificates/Data Center Technician.pdf';
@@ -51,8 +51,8 @@ const certificates = [
     { title: 'Ethical Hacking', thumbnail: ethicalHacking, pdf: ethicalHackingPDF },
     { title: 'Cybersecurity', thumbnail: cyberSecurity, pdf: cyberSecPDF },
     { title: 'Network Basics', thumbnail: networkBasic, pdf: networkBasicPDF },
-    { title: 'Introduction to Cybersecurity', thumbnail: cyberThumbnail, pdf: introToCyberPDF },
-    { title: 'Data Analytics', thumbnail: dataAnalyticsThumbnail, pdf: dataAnalyticsPDF },
+    { title: 'CCNA: Introduction to Networks', thumbnail: CCNA1, pdf: CCNAITN },
+    { title: 'CCNA: Switching, Routing, & Wireless Essentials', thumbnail: CCNA2, pdf: CCNASRWE },
     { title: 'Google IT Support', thumbnail: ITSupport, pdf: GoogleITSupport },
     { title: 'ePLDT/VITRO Certified Data Center Associate', thumbnail: CDCA, pdf: CDCAPDF },
     { title: 'ePLDT/VITRO Certified Data Center Technician', thumbnail: CDCT, pdf: CDCTPDF },
