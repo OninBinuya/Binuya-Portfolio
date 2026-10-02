@@ -21,21 +21,21 @@ const educationData = [
 ];
 
 const workData = [
+     {
+        title: "IT Service Desk Analyst",
+        subtitle: "Peak Support",
+        date: "May 2026 - Present"
+    },
+     {
+        title: "Desktop Support Engineer",
+        subtitle: "NettDriven Corporation/Cognizant Technology Solutions",
+        date: "September 2025 - May 2026"
+    },
     {
-        title: "Project Lead & Technical Support Intern (360 hours)",
+        title: "Project Lead & Technical Support Intern",
         subtitle: "Philippine Information Agency",
         date: "Jun - Aug 2024"
     },
-    {
-        title: "Visual Art Teacher",
-        subtitle: "ArtIsCool",
-        date: "May 2019 - Aug 2023"
-    },
-    {
-        title: "Commission Artist",
-        subtitle: "Self-Employed",
-        date: "May 2019 - Present"
-    }
 ];
 
 const Qualification = () => {

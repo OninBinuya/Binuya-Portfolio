@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // Added useState import
+import React, { useState } from 'react';
 import './certificates.css';
 
 // Import certificate thumbnails
@@ -15,13 +15,10 @@ import CCNA1 from '../../assets/Certificates/ITN.png';
 import ITSupport from '../../assets/Certificates/ITSupport.png';
 import CDCA from '../../assets/Certificates/CDCA_Badge.png';
 import CDCT from '../../assets/Certificates/CDCT_Badge.png';
-import NC1 from '../../assets/Certificates/css-nc1.png';
-import NC2 from '../../assets/Certificates/css-nc2.png';
-import NC3 from '../../assets/Certificates/css-nc3.png';
-import NC4 from '../../assets/Certificates/css-nc4.png';
-import NC5 from '../../assets/Certificates/css-nc5.png';
+import Cyber from '../../assets/Certificates/cyber_pic.webp';
+import CSC from '../../assets/Certificates/csc.webp';
 
-// Import PDF
+// Import PDFs
 import linuxUnhatchedPDF from '../../assets/Certificates/Onin John Paul Binuya-LINUX UNHATCHED-Certificate.pdf';
 import linuxEssentialPDF from '../../assets/Certificates/Onin John Paul Binuya-LINUX ESSENTIALS-certificate.pdf';
 import packetTracerPDF from '../../assets/Certificates/Onin John Paul Binuya_Intro to Packet -certificate (Cisco).pdf';
@@ -35,32 +32,26 @@ import CCNASRWE from '../../assets/Certificates/CCNA2.pdf';
 import GoogleITSupport from '../../assets/Certificates/Google_IT_Support.pdf';
 import CDCAPDF from '../../assets/Certificates/CDCA_Cert.pdf';
 import CDCTPDF from '../../assets/Certificates/Data Center Technician.pdf';
-import introCSSPDF from '../../assets/Certificates/Intro to CSS_Certificate of Completion.pdf';
-import configCompSysPDF from '../../assets/Certificates/Installing and Configuring Computer Systems_Certificate of Completion.pdf';
-import setCompNet from '../../assets/Certificates/Setting Up Computer Networks_Certificate of Completion.pdf';
-import maintainCompNet from '../../assets/Certificates/Maintaining Computer Systems and Networks_Certificate of Completion.pdf';
-import serversPDF from '../../assets/Certificates/Setting Up Computer Servers_Certificate of Completion.pdf';
+import CyberPDF from '../../assets/Certificates/Certificate.pdf';
+import CSCPDF from '../../assets/Certificates/CSC_HGE.pdf';
 
-// Array of certificates
+// Array of certificates (15 total = 5 columns x 3 rows)
 const certificates = [
     { title: 'Linux Unhatched', thumbnail: linuxUnhatched, pdf: linuxUnhatchedPDF },
     { title: 'Linux Essentials', thumbnail: linuxEssential, pdf: linuxEssentialPDF },
     { title: 'Packet Tracer', thumbnail: packetTracer, pdf: packetTracerPDF },
     { title: 'Network Essentials', thumbnail: networkEssential, pdf: networkEssentialPDF },
-    { title: 'Operating System Basics', thumbnail: OS, pdf: OSBasic },
-    { title: 'Ethical Hacking', thumbnail: ethicalHacking, pdf: ethicalHackingPDF },
     { title: 'Cybersecurity', thumbnail: cyberSecurity, pdf: cyberSecPDF },
+    { title: 'Ethical Hacking', thumbnail: ethicalHacking, pdf: ethicalHackingPDF },
+    { title: 'Operating System Basics', thumbnail: OS, pdf: OSBasic },
     { title: 'Network Basics', thumbnail: networkBasic, pdf: networkBasicPDF },
-    { title: 'CCNA: Introduction to Networks', thumbnail: CCNA1, pdf: CCNAITN },
-    { title: 'CCNA: Switching, Routing, & Wireless Essentials', thumbnail: CCNA2, pdf: CCNASRWE },
-    { title: 'Google IT Support', thumbnail: ITSupport, pdf: GoogleITSupport },
+    { title: 'Introduction to Networks', thumbnail: CCNA1, pdf: CCNAITN },
+    { title: 'Switching, Routing, & Wireless Essentials', thumbnail: CCNA2, pdf: CCNASRWE },
     { title: 'ePLDT/VITRO Certified Data Center Associate', thumbnail: CDCA, pdf: CDCAPDF },
     { title: 'ePLDT/VITRO Certified Data Center Technician', thumbnail: CDCT, pdf: CDCTPDF },
-    { title: 'Intro to CSS', thumbnail: NC1, pdf: introCSSPDF },
-    { title: 'Configuring Computer Systems', thumbnail: NC2, pdf: configCompSysPDF },
-    { title: 'Setting Up Computer Networks', thumbnail: NC4, pdf: setCompNet },
-    { title: 'Maintaining Computer Networks', thumbnail: NC3, pdf: maintainCompNet },
-    { title: 'Setting Up Computer Servers', thumbnail: NC5, pdf: serversPDF },
+    { title: 'Google IT Support', thumbnail: ITSupport, pdf: GoogleITSupport },
+    { title: 'CompTIA A+ Cyber', thumbnail: Cyber, pdf: CyberPDF},
+    { title: 'Civil Service Honor Graduate Eligibility', thumbnail: CSC, pdf: CSCPDF},
 ];
 
 const PDFModal = ({ isOpen, onClose, pdfUrl, title }) => {
@@ -68,10 +59,10 @@ const PDFModal = ({ isOpen, onClose, pdfUrl, title }) => {
 
     return (
         <div className="pdf-modal-overlay" onClick={onClose}>
-            <div className="pdf-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="pdf-modal-content" onClick={(e) => e.stopPropagation()}>
                 <div className="pdf-modal-header">
                     <h3>{title}</h3>
-                    <button className="pdf-modal-close" onClick={onClose}>×</button>
+                    <button className="pdf-modal-close" onClick={onClose} aria-label="Close">×</button>
                 </div>
                 <iframe
                     src={pdfUrl}
@@ -95,13 +86,13 @@ const Certificates = () => {
         <section className="certificates section" id="certificates">
             <h2 className="section__title">Certificates</h2>
             <span className="section__subtitle">What have I accomplished?</span>
-            
+
             <div className="certificates__container">
-                {certificates.map((cert, index) => (
-                    <div key={index} className="certificates__wrapper">
-                        <a 
-                            href={cert.pdf} 
-                            onClick={(e) => handleCertificateClick(cert, e)} 
+                {certificates.map((cert) => (
+                    <div key={cert.title} className="certificates__wrapper">
+                        <a
+                            href={cert.pdf}
+                            onClick={(e) => handleCertificateClick(cert, e)}
                             className="certificates__item"
                         >
                             <img src={cert.thumbnail} alt={cert.title} className="certificates__img" />

@@ -8,7 +8,7 @@ const Data = () => {
           
           <h3 className="home_subtitle">aspiring Network Engineer</h3>
             <p className="home_description">
-            A computer engineer with practical experience in network configuration, technical support, and software troubleshooting.
+            A computer engineer specializing in IT support, Microsoft 365, endpoint management, networking, and infrastructure, with experience in enterprise and MSP environments.
             </p>
           <a href="#contact" className="button button--flex">
               Let's get in touch

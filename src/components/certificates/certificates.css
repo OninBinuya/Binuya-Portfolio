@@ -1,6 +1,7 @@
+/* ===== Certificates grid: 5 columns x 3 rows (15 certificates) ===== */
 .certificates__container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 24px;
     justify-content: center;
     text-align: center;
@@ -58,7 +59,7 @@
     line-height: 1.2;
 }
 
-/* Updated Modal Styles with better mobile support */
+/* ===== PDF modal ===== */
 .pdf-modal-overlay {
     position: fixed;
     top: 0;
@@ -136,12 +137,14 @@
     background-color: #fff;
 }
 
-/* Responsive adjustments */
+/* ===== Responsive adjustments ===== */
+
+/* Tablet: 5 columns get tight, so drop to 3 (15 items = 5 even rows) */
 @media screen and (max-width: 992px) {
     .certificates__container {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .pdf-modal-content {
         width: 98%;
         height: 98%;
@@ -149,14 +152,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .certificates__container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
     .pdf-modal-header {
         padding: 10px 12px;
     }
-    
+
     .pdf-modal-close {
         font-size: 20px;
         width: 28px;
@@ -164,53 +163,60 @@
     }
 }
 
+/* Mobile: 2 columns */
 @media screen and (max-width: 576px) {
+
+    /* Center the last certificate when it would sit alone in a row */
+    .certificates__wrapper:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
     .certificates__container {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
-    
+
     .pdf-modal-overlay {
         padding: 8px;
     }
-    
+
     .pdf-modal-content {
         width: 100%;
         height: 100%;
     }
-    
+
     .pdf-modal-header h3 {
         font-size: 1rem;
     }
 }
 
-/* Additional mobile optimizations */
+/* Small phones */
 @media screen and (max-width: 380px) {
     .certificates__item {
         width: 80px;
         height: 80px;
     }
-    
+
     .certificates__img {
         width: 70px;
         height: 70px;
     }
-    
+
     .certificates__title {
         font-size: 12px;
     }
 }
 
-/* Handle landscape orientation on mobile */
+/* Landscape orientation on mobile */
 @media screen and (max-height: 600px) and (orientation: landscape) {
     .pdf-modal-content {
         height: 98vh;
     }
-    
+
     .pdf-modal-header {
         padding: 8px 12px;
     }
-    
+
     .pdf-modal-header h3 {
         font-size: 0.9rem;
     }
